@@ -1,5 +1,6 @@
 package com.vision.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -23,6 +24,7 @@ public class TblPriceInfo
 	private String price;
 	private String status;
 	private String pack;
+	@Column(name="packNew")
 	private String packNew;
 	private String offercode;
 }
