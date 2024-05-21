@@ -23,10 +23,5 @@ public class RequestParam {
     @JsonProperty("chargeAmount")
     private String chargeAmount;
    
-    
-    @JsonProperty("content")
-    private String content;
-    
-    @JsonProperty("planId")
-    private String language;
+   
 }
