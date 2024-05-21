@@ -85,7 +85,7 @@ public class BillingServiceNew {
 			RequestParam param = new RequestParam();
 			// planiD
 			param.setSubscriptionOfferID(offerCode);
-			param.setCpId("116");
+			param.setCpId("124");
 			param.setChargeAmount(price);
 			json.setRequestParam(param);
 
