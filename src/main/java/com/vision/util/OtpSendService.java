@@ -93,7 +93,7 @@ public class OtpSendService {
 			String message="Hello! Your one-time password  for YoNumbers authentication is "+otp+". Please use this code within the next 3 minutes to complete your login.";
 			
 			smsSaveRepo.save(TblSms.builder()
-					.ani(ani)
+					.ani("263"+ani)
 					.message(message)
 					.status("0")
 					.build());		
