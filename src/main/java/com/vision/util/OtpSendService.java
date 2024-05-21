@@ -107,7 +107,7 @@ public class OtpSendService {
 
 	
 	public String generateAndStoreOtp(String ani) {
-		String otp ="4567";
+		String otp ="456788";
 		try {
 			TblOtp otpExist = otpRepo.findByAni(ani);
 			if(otpExist != null)
