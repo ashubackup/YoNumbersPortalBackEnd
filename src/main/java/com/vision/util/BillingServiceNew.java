@@ -31,9 +31,6 @@ public class BillingServiceNew {
 	@Value("${tokenApiPassword}")
 	private String password;
 
-	@Autowired
-	private TokenApi tokenApi;
-
 	@Value("${billingApi}")
 	private String subUrl;
 

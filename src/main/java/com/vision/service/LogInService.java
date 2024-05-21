@@ -129,9 +129,10 @@ public class LogInService {
 	
 	private Response sendOtpAndBuildResponse(String ani) {
 	        System.out.println("User Can Access");
-	        String otp = otpSendService.generateAndStoreOtp(ani);
-	        System.out.println("Otp is-- " + otp);
-	        otpSendService.sendOTP(ani, otp);
+//	        String otp = otpSendService.generateAndStoreOtp(ani);
+//	        System.out.println("Otp is-- " + otp);
+	        otpSendService.sendOTP(ani);
+	        
 	        return buildResponse(STATUS_CODE_SUCCESS, "User Can Access, Navigate to Otp verify page", CODE_ACCESS);
     }
 	

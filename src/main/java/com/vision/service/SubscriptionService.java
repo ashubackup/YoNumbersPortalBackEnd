@@ -58,9 +58,8 @@ public class SubscriptionService {
 	            if(responseCode.equalsIgnoreCase("0"))
 	            {
 	                //billing success
-	                String otp = otpSendService.generateAndStoreOtp(ani);
-	                System.out.println("Otp is " + otp);
-	                otpSendService.sendOTP(ani, otp);
+	                otpSendService.sendOTP(ani);
+	                
 
 	                return Response.builder()
 	                        .statusCode("200")
@@ -82,10 +81,11 @@ public class SubscriptionService {
 	            {
 	                //User Can Access
 	                //sent otp for two step verification
-	                System.out.println("User Can Access");
-	                String otp = otpSendService.generateAndStoreOtp(ani);
-	                System.out.println("Otp is " + otp);
-	                otpSendService.sendOTP(ani, otp);
+//	                System.out.println("User Can Access");
+//	                String otp = otpSendService.generateAndStoreOtp(ani);
+//	                System.out.println("Otp is " + otp);
+	                otpSendService.sendOTP(ani);
+	               
 
 	                return Response.builder()
 	                        .statusCode("200")

@@ -22,8 +22,11 @@ public class RequestParam {
     
     @JsonProperty("chargeAmount")
     private String chargeAmount;
+   
     
-    // Getters and setters
-
-    // You can add constructors if needed
+    @JsonProperty("content")
+    private String content;
+    
+    @JsonProperty("planId")
+    private String language;
 }
