@@ -53,10 +53,11 @@ public class TokenApi {
             // Build request entity
             HttpEntity<MultiValueMap<String, String>> requestEntity = new HttpEntity<>(requestBody, headers);
 
-
+            System.out.println("Token request " + requestEntity);
             // Make the HTTP request
             ResponseEntity<String> responseEntity = restTemplate.exchange(tokenUrl, HttpMethod.POST, requestEntity, String.class);
-
+            
+            System.out.println("Response ---"+ responseEntity);
             // Process the response
           //  int statusCode = responseEntity.getStatusCodeValue();
             String responseBody = responseEntity.getBody();
@@ -74,3 +75,8 @@ public class TokenApi {
         return responseString;
     }
 }
+
+
+
+
+

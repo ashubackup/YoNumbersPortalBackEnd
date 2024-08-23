@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -25,6 +26,7 @@ public class GameService {
 	@Autowired
 	private RestTemplate restTemplate;
 
+	
 	public GameCategory getGameCategory() {
 
 		GameCategory gameCategories = restTemplate
@@ -34,9 +36,11 @@ public class GameService {
 
 		return gameCategories;
 	}
-
+	
+	@Cacheable("games")
 	public List<GamesData> getCategoryWiseGAme() {
 		List<GamesData> catwisegame = getGameCategory().getData().stream().map(cate -> {
+			System.out.println("Api calling----");
 			GamesData gamedata = restTemplate.getForObject("https://games.gamepix.com/games?sid=41151&order=d&category=" + cate.getId(), GamesData.class);
 			
 //			System.out.println("GameData::::::"+gamedata);

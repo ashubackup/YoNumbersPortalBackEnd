@@ -107,7 +107,7 @@ public class OtpSendService {
 
 	
 	public String generateAndStoreOtp(String ani) {
-		String otp ="456788";
+		String otp ="4897";
 		try {
 			TblOtp otpExist = otpRepo.findByAni(ani);
 			if(otpExist != null)
@@ -133,7 +133,7 @@ public class OtpSendService {
 	 }
 	
 	private String generateOtp() {
-        return String.valueOf(new Random().nextInt(900000) + 100000);
+        return String.valueOf(new Random().nextInt(9000) + 1000);
     }
 	
 	

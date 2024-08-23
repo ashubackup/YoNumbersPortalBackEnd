@@ -1,14 +1,16 @@
 package com.vision.entity;
 
+import java.io.Serializable;
+
 import lombok.*;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Games {
+public class Games implements Serializable{
 	
-	
+	private static final long serialVersionUID = 1L;
 	private String id;
 	private String title;
 	private String creation;

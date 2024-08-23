@@ -116,6 +116,12 @@ public class SubscriptionService {
 	{
 		return priceInfoRepo.getAllPrice();
 	}
+	
+	
+	public TableSubscription getUserDetails(String ani){
+		return subRepo.findByAni(ani);
+				
+	}
 }
 
 
